@@ -28,7 +28,10 @@
   </head>
   <body>
     <div class="container-fluid" id="header">
-      <img src="./src/tasks.gif" style="width: 15%; height: auto" />
+      <div class="logo">
+        <img src="./src/tasks.gif" style="width: 15%; height: auto"  />
+      </div>
+     
 
       <h1 id="Greetings"></h1>
       <h2 id="Greetings2">What's In Your Mind Today</h2>
@@ -42,7 +45,7 @@
         <button type="button" id="todoButton">ADD Todos</button>
       </div>
       <div class="notesBox">
-        <button type="button" id="todoButton">ADD Notes</button>
+        <button type="button" id="notesButton">ADD Notes</button>
       </div>
     </div>
 
@@ -60,6 +63,20 @@
       </ul>
       <button type="submit" id="edit-button" onclick="editField()">Edit</button>
       <button type="submit" id="done-button" onclick="done()">Done</button>
+    </div>
+
+    <div class="wrapper" id="wrapperBox" style="display: none">
+      <label for="freeform">Notes</label>
+      <br />
+      <textarea
+        id="freeform"
+        name="freeform"
+        rows="8"
+        cols="80"
+        placeholder=" Enter text here..."
+      >
+      </textarea>
+      <button id="backButton">BACK</button>
     </div>
 
     <script src="./script.js"></script>
