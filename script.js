@@ -31,14 +31,14 @@ let btn = document.getElementById('todoButton');
 // Get the <span> element that closes the modal
 let span = document.getElementById('close');
 let header = document.getElementById('header');
-let buttons = document.getElementById('buttons');
+
 let mainBox = document.getElementById('mainBox');
 
 // When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = 'block';
   header.style.display = 'none';
-  buttons.style.display = 'none';
+
   mainBox.style.display = 'none';
 };
 
@@ -47,7 +47,6 @@ span.onclick = function () {
   console.log('close');
 
   modal.style.display = 'none';
-  
 };
 
 // When the user clicks anywhere outside of the modal, close it
@@ -62,8 +61,11 @@ let close = document.getElementsByClassName('close');
 let element;
 for (element = 0; element < close.length; element++) {
   close[element].onclick = function () {
+    console.log('closee++');
     let div = this.parentElement;
     div.style.display = 'none';
+    header.style.display = 'block';
+    mainBox.style.display = 'flex';
   };
 }
 
@@ -99,6 +101,9 @@ function newElement() {
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
       var div = this.parentElement;
+      console.log('closee##');
+      header.style.display = 'block';
+      mainBox.style.display = 'flex';
       div.style.display = 'none';
     };
   }
