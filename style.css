@@ -73,6 +73,10 @@ button:hover::before {
   display: block; /* Hidden by default */
   text-align: center;
 }
+#label {
+  margin-right: 7%;
+  color: #000000;
+}
 
 .modal {
   display: none; /* Hidden by default */

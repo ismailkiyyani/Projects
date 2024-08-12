@@ -29,9 +29,8 @@
   <body>
     <div class="container-fluid" id="header">
       <div class="logo">
-        <img src="./src/tasks.gif" style="width: 15%; height: auto"  />
+        <img src="./src/tasks.gif" style="width: 15%; height: auto" />
       </div>
-     
 
       <h1 id="Greetings"></h1>
       <h2 id="Greetings2">What's In Your Mind Today</h2>
@@ -66,17 +65,22 @@
     </div>
 
     <div class="wrapper" id="wrapperBox" style="display: none">
-      <label for="freeform">Notes</label>
+      <label id="label" for="freeform">Notes</label>
       <br />
       <textarea
         id="freeform"
         name="freeform"
         rows="8"
-        cols="80"
-        placeholder=" Enter text here..."
+        cols="24"
+        placeholder="Enter text here..."
+        value=""
       >
       </textarea>
+      <button id="addButton" onclick="addButton()">ADD</button>
       <button id="backButton">BACK</button>
+    </div>
+    <div >
+      <p id="demo"></p>
     </div>
 
     <script src="./script.js"></script>

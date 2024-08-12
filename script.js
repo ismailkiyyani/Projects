@@ -136,3 +136,8 @@ function done() {
     listItems[i].contentEditable = false;
   }
 }
+
+function addButton() {
+  let wrapperBoxValue = document.getElementById('freeform').value;
+  document.getElementById('demo').innerHTML = wrapperBoxValue;
+}
