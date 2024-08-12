@@ -60,6 +60,7 @@ backButton.onclick = function () {
   header.style.display = 'block';
   mainBox.style.display = 'flex';
   textarea.style.display = 'none';
+  document.getElementById('card').style.display = 'none';
 };
 
 // When the user clicks anywhere outside of the modal, close it
@@ -139,5 +140,8 @@ function done() {
 
 function addButton() {
   let wrapperBoxValue = document.getElementById('freeform').value;
-  document.getElementById('demo').innerHTML = wrapperBoxValue;
+  document.getElementById('card-text').innerHTML = wrapperBoxValue;
+  document.getElementById('freeform').value = '';
+  document.getElementById('card').style.display = 'block';
+  document.getElementById('card-header').innerHTML = 'Contents';
 }
